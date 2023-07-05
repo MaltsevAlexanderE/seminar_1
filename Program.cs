@@ -147,18 +147,18 @@
 
 // 32679 -> 6
 
-Console.WriteLine("Введите число для проверки");
-int num1 = Convert.ToInt32(Console.ReadLine());
-if (num1 < 99 )
-Console.WriteLine("В числе нет третьей цифры");
-else
-{
-    while (num1 > 999 ) 
-    {
-        num1 = num1 / 10;
-    }
-    Console.WriteLine(num1 % 10);
-}
+// Console.WriteLine("Введите число для проверки");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// if (num1 < 99 )
+// Console.WriteLine("В числе нет третьей цифры");
+// else
+// {
+//     while (num1 > 999 ) 
+//     {
+//         num1 = num1 / 10;
+//     }
+//     Console.WriteLine(num1 % 10);
+// }
 
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
@@ -177,3 +177,141 @@ else
 //     else
 //     Console.WriteLine("Этот день выходной");
 // }
+
+
+
+// void CheckKoord(int x, int y)
+// {
+// if (x > 0 && y > 0)
+// Console.WriteLine("Это четверть № 1");
+// else if (x > 0 && y < 0)
+// Console.WriteLine("Это четверть № 4");
+// else if (x < 0 && y < 0)
+// Console.WriteLine("Это четверть № 3");
+// else if (x < 0 && y > 0)
+// Console.WriteLine("Это четверть № 2");
+// else
+// Console.WriteLine("Точка лежит на координатной оси");
+// }
+
+// int CheckKoord2(int x, int y)
+// {
+// int result = 0;
+// if (x > 0 && y > 0)
+// result = 1;
+// else if (x > 0 && y < 0)
+// result = 4;
+// else if (x < 0 && y < 0)
+// result = 3;
+// else if (x < 0 && y > 0)
+// result = 2;
+// return result;
+// }
+
+
+
+
+// Console.WriteLine("Введите координату X");
+// int x = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координату Y");
+// int y = Convert.ToInt32(Console.ReadLine());
+// CheckKoord(x,y);
+
+
+
+// void CheckKoord(int x)
+// {
+//     int i = 1;
+//     while (i < x+1)
+//     {
+//         Console.WriteLine(i*i);
+//         i ++;
+//     }
+
+// }
+
+
+
+
+
+
+// Console.WriteLine("Введите число");
+// int x = Convert.ToInt32(Console.ReadLine());
+// CheckKoord(x);
+
+
+// Задача 19
+// Напишите программу, которая принимает на вход пятизначное число и проверяет, 
+// является ли оно палиндромом. Через строку решать нельзя.
+// 14212 -> нет
+// 12821 -> да
+// 23432 -> да
+
+
+void CheckKoord(int x)
+{
+    if ((9999 <= x) &  (x < 99999))
+    {
+   if ((x / 10000 == x % 10) & (x / 1000 % 10 == x % 100 / 10))
+    Console.WriteLine("DA");
+   else
+   Console.WriteLine("NET");
+    }
+    else 
+    Console.WriteLine("Число не пятизначное");
+}
+
+
+Console.WriteLine("Введите число");
+int x = Convert.ToInt32(Console.ReadLine());
+CheckKoord(x);
+
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов 
+// чисел от 1 до N.
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
+
+// void CheckKoord(int num)
+// {
+//     int i = 1;
+// double resault = 0;
+// while (i <= num)
+// {
+//     resault = (Math.Pow(i,3));
+//     Console.Write($" {resault}");
+//     i++;
+// }
+// }
+
+// Console.WriteLine("Введите любое число:");
+// int num = Convert.ToInt32(Console.ReadLine());
+// CheckKoord(num);
+
+// Задача 21
+
+// Напишите программу, которая принимает на вход координаты двух точек и находит 
+// расстояние между ними в 3D пространстве.
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+// double Rast(double x1, double y1, double x2, double y2, double z1, double z2)
+// {
+// return Math.Sqrt((Math.Pow(x2 - x1,2)) + (Math.Pow(y2 - y1,2)) + (Math.Pow(z2 - z1,2)));
+// }
+
+
+// Console.WriteLine("Введите Координату x1 для точки А");
+// double x1 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите Координату y1 для точки А");
+// double y1 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите Координату z1 для точки А");
+// double z1 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите Координату x2 для точки B");
+// double x2 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите Координату y2 для точки B");
+// double y2 = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите Координату z2 для точки А");
+// double z2 = Convert.ToDouble(Console.ReadLine());
+
+// Console.WriteLine($"Расстояние между двяму точками равно: {Math.Round(Rast(x1,y1,x2,y2,z1,z2),3)}");
